@@ -2655,13 +2655,6 @@ function is_robots_txt_page(){
 }
 endif;
 
-//access.phpページかどうか
-if ( !function_exists( 'is_analytics_access_php_page' ) ):
-function is_analytics_access_php_page(){
-  return isset($_SERVER['REQUEST_URI']) && includes_string($_SERVER['REQUEST_URI'], '/lib/analytics/access.php?');
-}
-endif;
-
 //ログインページかどうか
 if ( !function_exists( 'is_login_page' ) ):
 function is_login_page() {
